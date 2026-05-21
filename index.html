@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cortex Node | Memory Layer for Autonomous Agents</title>
+    <meta
+      name="description"
+      content="Cortex is a Base-native memory layer that gives autonomous AI agents persistent cognition through onchain memory."
+    />
+    <link rel="icon" href="./assets/cortex-logo.jpeg" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="#top" aria-label="Cortex home">
+          <img src="./assets/cortex-logo.jpeg" alt="" />
+          <span>cortex</span>
+          <span class="brand-sub">memory node</span>
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <a class="active" href="#top">home</a>
+          <a href="#memory">memory</a>
+          <a href="#protocol">protocol</a>
+          <a href="#gitlawb">gitlawb</a>
+          <a href="#network">network</a>
+          <a href="#links">links</a>
+          <a href="#schema">schema</a>
+        </nav>
+
+        <div class="node-id wallet-control" aria-label="Wallet connection">
+          <span id="walletSummary">wallet:not_connected</span>
+          <button id="connectWallet" class="wallet-button" type="button">connect wallet</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top" class="page-shell">
+      <section class="hero-grid">
+        <div class="operator-panel hero-copy">
+          <div class="panel-topline">
+            <span>autonomous agent memory</span>
+            <span>Base native</span>
+          </div>
+          <div class="hero-body">
+            <p class="eyebrow">Base-native agent infrastructure</p>
+            <h1>
+              <span>memory layer</span>
+              <span>for autonomous AI agents.</span>
+            </h1>
+            <p class="hero-text">
+              Persistent cognition for autonomous agents. Cortex lets AI agents
+              remember, evolve, and maintain continuity through onchain memory.
+            </p>
+            <div class="hero-tags" aria-label="Cortex positioning">
+              <span>autonomous agents</span>
+              <span>persistent cognition</span>
+              <span>onchain memory</span>
+            </div>
+            <div class="hero-actions">
+              <button id="initializeMemory" class="button primary" type="button">initialize memory →</button>
+              <a class="button secondary" href="#protocol">inspect protocol →</a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="identity-card" aria-label="Cortex memory status">
+          <div class="identity-header">
+            <img src="./assets/cortex-logo.jpeg" alt="Cortex logo" />
+            <div>
+              <p class="aside-label">memory status</p>
+              <strong>continuity_active</strong>
+            </div>
+          </div>
+          <dl>
+            <div>
+              <dt>status</dt>
+              <dd><span class="status-dot"></span>online</dd>
+            </div>
+            <div>
+              <dt>network</dt>
+              <dd id="chainStatus">Base native</dd>
+            </div>
+            <div>
+              <dt>wallet</dt>
+              <dd id="walletStatus" class="break">not connected</dd>
+            </div>
+            <div>
+              <dt>memory root</dt>
+              <dd id="memoryRootStatus" class="break">not initialized</dd>
+            </div>
+            <div>
+              <dt>gitlawb ref</dt>
+              <dd id="gitlawbStatus" class="break">gitlawb://did:key:z6MktmKxVdA3a5hNb9Up4bA8tkC8ZEpnSwze2TKWmjgLWxpx/cortex-memory/memory/cortex-agent-001/latest.json</dd>
+            </div>
+          </dl>
+          <div class="registry-tools">
+            <p id="appStatus" class="app-status">ready</p>
+            <div class="wallet-actions" aria-label="Wallet tools">
+              <button id="switchWallet" class="wallet-button ghost" type="button">switch account</button>
+              <button id="switchNetwork" class="wallet-button ghost" type="button">switch Base Sepolia</button>
+            </div>
+            <label for="registryAddress">registry contract</label>
+            <div>
+              <input id="registryAddress" type="text" placeholder="0x... or deploy below" />
+              <button id="saveRegistry" type="button">save</button>
+            </div>
+            <button id="deployRegistry" type="button">deploy Base Sepolia registry</button>
+            <div id="explorerLinks" class="explorer-links" aria-label="BaseScan links" hidden>
+              <a id="contractExplorer" href="#" target="_blank" rel="noreferrer">View contract</a>
+              <a id="txExplorer" href="#" target="_blank" rel="noreferrer">View on BaseScan</a>
+            </div>
+          </div>
+          <div class="memory-terminal" aria-label="Memory runtime log">
+            <p><span>root</span> <strong id="terminalRoot">not_initialized</strong></p>
+            <p><span>wallet</span> <strong id="terminalWallet">awaiting_connection</strong></p>
+            <p><span>recall</span> previous_session.loaded</p>
+            <p><span>proof</span> <strong id="terminalProof">registry_required</strong></p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="stats-grid" aria-label="Cortex node metrics">
+        <a href="#memory">
+          <strong>24,918</strong>
+          <span>memory commits</span>
+        </a>
+        <a href="#network">
+          <strong>128</strong>
+          <span>agent identities</span>
+        </a>
+        <a href="#protocol">
+          <strong>7</strong>
+          <span>protocol modules</span>
+        </a>
+        <a href="#schema">
+          <strong>0.94</strong>
+          <span>recall confidence</span>
+        </a>
+      </section>
+
+      <section id="memory" class="content-grid">
+        <div class="feed-panel">
+          <div class="section-heading">
+            <span>recent memory updates</span>
+            <button id="refreshEvents" type="button">refresh events →</button>
+          </div>
+          <div id="eventFeed" class="feed-list">
+            <article class="feed-empty">
+              <time>ready</time>
+              <div>
+                <h2>No onchain events loaded yet</h2>
+                <p>Deploy or set a registry address, then refresh events.</p>
+              </div>
+              <span>idle</span>
+            </article>
+          </div>
+        </div>
+
+        <aside class="quick-panel">
+          <h2>memory action</h2>
+          <div class="demo-flow" aria-label="Cortex demo flow">
+            <div id="flowWallet" class="flow-step">
+              <span>01</span>
+              <strong>Connect wallet</strong>
+            </div>
+            <div id="flowMemory" class="flow-step">
+              <span>02</span>
+              <strong>Commit memory</strong>
+            </div>
+            <div id="flowGitlawb" class="flow-step">
+              <span>03</span>
+              <strong>Publish Gitlawb</strong>
+            </div>
+          </div>
+          <form id="memoryForm" class="memory-form">
+            <label>
+              agent id
+              <input id="agentId" type="text" value="cortex-agent-001" />
+            </label>
+            <label>
+              gitlawb ref
+              <input id="gitlawbRef" type="text" value="gitlawb://did:key:z6MktmKxVdA3a5hNb9Up4bA8tkC8ZEpnSwze2TKWmjgLWxpx/cortex-memory/memory/cortex-agent-001/latest.json" />
+            </label>
+            <div id="gitlawb" class="gitlawb-panel" aria-label="Gitlawb publish target">
+              <div class="packet-heading">
+                <span>gitlawb target</span>
+                <button id="copyGitlawbCommands" type="button">copy gl commands</button>
+              </div>
+              <div class="gitlawb-fields">
+                <label>
+                  owner did
+                  <input id="gitlawbOwner" type="text" value="did:key:z6MktmKxVdA3a5hNb9Up4bA8tkC8ZEpnSwze2TKWmjgLWxpx" />
+                </label>
+                <label>
+                  repo
+                  <input id="gitlawbRepo" type="text" value="cortex-memory" />
+                </label>
+                <label>
+                  path
+                  <input id="gitlawbPath" type="text" value="memory/cortex-agent-001/latest.json" />
+                </label>
+              </div>
+              <div class="hash-preview">
+                <span>gitlawb_uri</span>
+                <code id="gitlawbUriPreview">gitlawb://did:key:z6MktmKxVdA3a5hNb9Up4bA8tkC8ZEpnSwze2TKWmjgLWxpx/cortex-memory/memory/cortex-agent-001/latest.json</code>
+              </div>
+              <div class="gitlawb-actions">
+                <button id="useGitlawbUri" type="button">use as metadata URI</button>
+                <button id="copyGitlawbUri" type="button">copy URI</button>
+                <button id="publishGitlawb" type="button" onclick="window.cortexPublishGitlawb?.()">publish to Gitlawb</button>
+              </div>
+              <p id="gitlawbBridgeStatus" class="bridge-status">bridge: http://127.0.0.1:4181</p>
+              <div id="gitlawbPublishMeta" class="publish-meta" hidden>
+                <a id="gitlawbRepoLink" href="#" target="_blank" rel="noreferrer">View on Gitlawb</a>
+                <a id="gitlawbPacketLink" href="#" target="_blank" rel="noreferrer">View packet source</a>
+                <code id="gitlawbCommitStatus">commit: pending</code>
+              </div>
+              <pre id="gitlawbBridgeOutput" class="bridge-output">checking bridge...</pre>
+              <details class="gitlawb-command-details">
+                <summary>preview publish commands</summary>
+                <pre id="gitlawbCommands">gl identity show</pre>
+              </details>
+            </div>
+            <label>
+              source ref
+              <input id="sourceRef" type="text" value="session://genesis" />
+            </label>
+            <label>
+              memory payload
+              <textarea id="memoryPayload" rows="5">Cortex initialized persistent memory for an autonomous AI agent.</textarea>
+            </label>
+            <div class="hash-preview" aria-label="Memory hash preview">
+              <span>memory_hash</span>
+              <code id="memoryHashPreview">0x...</code>
+            </div>
+            <button id="commitMemory" class="button secondary" type="button">commit memory →</button>
+          </form>
+          <p id="txStatus">
+            Connect a wallet, deploy or set the registry, then initialize the
+            first memory root.
+          </p>
+          <div class="packet-panel" aria-label="Local memory packets">
+            <div class="packet-heading">
+              <span>local memory packets</span>
+              <button id="copyPacket" type="button">copy packet</button>
+            </div>
+            <pre id="packetPreview">{}</pre>
+          </div>
+        </aside>
+      </section>
+
+      <section id="protocol" class="protocol-panel">
+        <div class="section-heading">
+          <span>protocol surface</span>
+          <span>memory / identity / recall / proof</span>
+        </div>
+        <div class="protocol-grid">
+          <article>
+            <span>01</span>
+            <h2>Persistent memory</h2>
+            <p>Agents no longer start from zero. Session history becomes durable protocol state.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h2>Evolving cognition</h2>
+            <p>Recall weights, source references, and outcomes compound into better future behavior.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h2>Onchain continuity</h2>
+            <p>Memory roots are anchored on Base so agent identity and state can outlive any client.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h2>Versioned collaboration</h2>
+            <p>Gitlawb references make memory branches inspectable, forkable, and development-native.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="network" class="network-grid">
+        <div>
+          <p class="eyebrow">network view</p>
+          <h2>One memory layer across agents, repos, and Base apps.</h2>
+        </div>
+        <div class="network-map" aria-label="Cortex network map">
+          <div class="map-node">autonomous agents</div>
+          <div class="map-line"></div>
+          <div class="map-node active">cortex memory protocol</div>
+          <div class="map-line"></div>
+          <div class="map-row">
+            <div class="map-node">Base</div>
+            <div class="map-node">Gitlawb</div>
+            <div class="map-node">tooling</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="links" class="links-panel">
+        <div class="section-heading">
+          <span>official links</span>
+          <span>cortex / base / gitlawb</span>
+        </div>
+        <div class="links-grid">
+          <a href="https://github.com/CortexMemory/Cortex" target="_blank" rel="noreferrer">
+            <span>GitHub</span>
+            <strong>Cortex</strong>
+          </a>
+          <a href="https://gitlawb.com/z6MktmKxVdA3a5hNb9Up4bA8tkC8ZEpnSwze2TKWmjgLWxpx/cortex-memory" target="_blank" rel="noreferrer">
+            <span>Gitlawb</span>
+            <strong>cortex-memory</strong>
+          </a>
+          <a href="https://sepolia.basescan.org/address/0x3CE4c1157A82911a826e1f64c0E03d6c1Eb649B7" target="_blank" rel="noreferrer">
+            <span>BaseScan</span>
+            <strong>MemoryRegistry</strong>
+          </a>
+          <a href="https://node.gitlawb.com/z6MktmKxVdA3a5hNb9Up4bA8tkC8ZEpnSwze2TKWmjgLWxpx/cortex-memory/raw/branch/main/memory/cortex-agent-001/latest.json" target="_blank" rel="noreferrer">
+            <span>Packet</span>
+            <strong>latest.json</strong>
+          </a>
+        </div>
+      </section>
+
+      <section id="schema" class="schema-panel">
+        <div class="section-heading">
+          <span>memory schema</span>
+          <span>draft primitive</span>
+        </div>
+        <div class="schema-grid">
+          <code>agent_id</code>
+          <code>memory_hash</code>
+          <code>source_ref</code>
+          <code>version_root</code>
+          <code>recall_score</code>
+          <code>timestamp</code>
+          <code>base_tx</code>
+          <code>outcome_hash</code>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>cortex memory node</span>
+      <span>The memory layer for autonomous agents.</span>
+    </footer>
+    <script src="./vendor/ethers.umd.min.js"></script>
+    <script src="./config.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
