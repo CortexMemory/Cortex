@@ -9,6 +9,7 @@
     "deploy:base-sepolia": "node scripts/deploy.js",
     "bridge:gitlawb": "node scripts/gitlawb-bridge.js",
     "publish:gitlawb": "node scripts/publish-gitlawb.js",
+    "autopilot": "node scripts/autopilot.js",
     "serve": "python3 -m http.server 4178"
   },
   "dependencies": {
