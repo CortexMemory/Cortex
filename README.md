@@ -4,6 +4,8 @@ The memory layer for autonomous AI agents.
 
 ## Official links
 
+- Website: https://cortexmemory.xyz
+- X (Twitter): https://x.com/Cortex_Hub
 - GitHub: https://github.com/CortexMemory/Cortex
 - Gitlawb: https://gitlawb.com/z6MktmKxVdA3a5hNb9Up4bA8tkC8ZEpnSwze2TKWmjgLWxpx/cortex-memory
 - BaseScan: https://sepolia.basescan.org/
