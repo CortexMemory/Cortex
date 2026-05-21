@@ -7,7 +7,7 @@ import { ethers } from "ethers";
 const DEFAULT_OWNER_DID = "did:key:z6MktmKxVdA3a5hNb9Up4bA8tkC8ZEpnSwze2TKWmjgLWxpx";
 const DEFAULT_REPO = "cortex-memory";
 const DEFAULT_AGENT_ID = "cortex-agent-001";
-const DEFAULT_REGISTRY = "0x3CE4c1157A82911a826e1f64c0E03d6c1Eb649B7";
+const DEFAULT_REGISTRY = "";
 const DEFAULT_RPC_URL = "https://sepolia.base.org";
 const DEFAULT_PAYLOAD = "Cortex initialized persistent memory for an autonomous AI agent.";
 const DEFAULT_SOURCE_REF = "session://genesis";

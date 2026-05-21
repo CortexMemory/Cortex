@@ -6,7 +6,7 @@ The memory layer for autonomous AI agents.
 
 - GitHub: https://github.com/CortexMemory/Cortex
 - Gitlawb: https://gitlawb.com/z6MktmKxVdA3a5hNb9Up4bA8tkC8ZEpnSwze2TKWmjgLWxpx/cortex-memory
-- BaseScan: https://sepolia.basescan.org/address/0x3CE4c1157A82911a826e1f64c0E03d6c1Eb649B7
+- BaseScan: https://sepolia.basescan.org/
 - Latest packet: https://node.gitlawb.com/z6MktmKxVdA3a5hNb9Up4bA8tkC8ZEpnSwze2TKWmjgLWxpx/cortex-memory/raw/branch/main/memory/cortex-agent-001/latest.json
 
 ## Run locally
