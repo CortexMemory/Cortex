@@ -23,7 +23,8 @@ function runPublish(payload) {
     env: {
       ...process.env,
       MEMORY_PAYLOAD: payload,
-      SOURCE_REF: "session://autopilot"
+      SOURCE_REF: "session://autopilot",
+      REGISTRY_ADDRESS: "0x3CE4c1157A82911a826e1f64c0E03d6c1Eb649B7"
     }
   });
   
