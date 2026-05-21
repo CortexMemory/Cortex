@@ -967,8 +967,23 @@ dd {
 .protocol-panel,
 .schema-panel,
 .network-grid,
+.swap-panel,
 .links-panel {
   margin-top: 18px;
+  border: 1px solid var(--line);
+  background: var(--panel-soft);
+}
+
+.swap-container {
+  padding: 34px 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.swap-container iframe {
+  max-width: 540px;
+  background: transparent;
+  box-shadow: 0 10px 40px rgba(100, 255, 156, 0.05);
 }
 
 .protocol-grid {
