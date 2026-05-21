@@ -172,16 +172,22 @@ function writeRepoFiles(repoDir, packet) {
 
 Cortex is the memory layer for autonomous AI agents.
 
+## Official Links
+
+- **Website:** [cortexmemory.xyz](https://cortexmemory.xyz)
+- **X (Twitter):** [@Cortex_Hub](https://x.com/Cortex_Hub)
+- **GitHub:** [CortexMemory/Cortex](https://github.com/CortexMemory/Cortex)
+
 ## Current Packet
 
-- Agent: \`${packet.agent_id}\`
-- Registry: \`${packet.registry}\`
-- Memory root: \`${packet.memory_root || "pending"}\`
-- Latest memory hash: \`${packet.memory_hash}\`
-- Gitlawb URI: \`${packet.gitlawb.uri}\`
-- BaseScan tx: ${packet.links.transaction || "pending"}
+- **Agent:** \`${packet.agent_id}\`
+- **Registry:** \`${packet.registry}\`
+- **Memory Root:** \`${packet.memory_root || "pending"}\`
+- **Latest Memory Hash:** \`${packet.memory_hash}\`
+- **Gitlawb URI:** \`${packet.gitlawb.uri}\`
+- **BaseScan TX:** ${packet.links.transaction || "pending"}
 
-Packets are anchored on Base Sepolia and versioned through Gitlawb.
+> Packets are anchored on Base Sepolia and versioned through Gitlawb.
 `);
 }
 
